@@ -1,0 +1,29 @@
+{
+  "Competitive Programming Template": {
+    "prefix": "cppstx",
+    "body": [
+      "#include <cmath>",
+      "#include <iomanip>",
+      "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(NULL);",
+      "    int x;",
+      "    cin >> x;",
+      "    ",
+      "    $0",
+      "    long long ans = 1;",
+      "    cout << ans << endl;",
+      "    double ans = 1;",
+      "    cout << fixed << setprecision(2) << ans << endl;",
+      "    ",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Template C++"
+  }
+}
+
