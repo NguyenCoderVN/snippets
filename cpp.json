@@ -11,10 +11,10 @@
       "  ios_base::sync_with_stdio(false);",
       "  cin.tie(NULL);",
       "\t",
-      "  int $0;",
-      "  cin >> $1;",
+      "  int ${1:N};",
+      "  cin >> ${1:N};",
       "  ",
-      "\t$2",
+      "\t$0",
       "  ",
       "  return 0;",
       "}"
