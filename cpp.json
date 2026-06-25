@@ -1,6 +1,6 @@
 {
   "Competitive Programming Template N": {
-    "prefix": "cppstN",
+    "prefix": "cppst",
     "body": [
       "#include <cmath>",
       "#include <iostream>",
