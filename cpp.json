@@ -1,27 +1,4 @@
 {
-  "Competitive Programming Template X": {
-    "prefix": "cppstx",
-    "body": [
-      "#include <cmath>",
-      "#include <iomanip>",
-      "#include <iostream>",
-      "",
-      "using namespace std;",
-      "",
-      "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "  int x;",
-      "  cin >> x;",
-      "  ",
-      "  $0",
-      "  ",
-      "  return 0;",
-      "}"
-    ],
-    "description": "Template C++ với biến X"
-  },
-
   "Competitive Programming Template N": {
     "prefix": "cppstN",
     "body": [
@@ -33,6 +10,7 @@
       "int main() {",
       "  ios_base::sync_with_stdio(false);",
       "  cin.tie(NULL);",
+      "\t",
       "  int N;",
       "  cin >> N;",
       "  ",
