@@ -14,26 +14,17 @@
       "  int ${1:N};",
       "  cin >> ${1:N};",
       "  ",
-      "\t$0",
       "  ",
       "  return 0;",
       "}"
     ],
     "description": "Template C++ với biến N và vòng lặp"
   },
-      "coutend": {
-        "prefix": "cout",
-        "body": ["std::cout << ${1:message}<< std::endl;"],
-        "description": "Code snippet for printing to std::cout, provided the header is set"
-    }
+  "coutend": {
+    "prefix": "coutendl",
+    "body": [
+      "std::cout << ${1:message} << std::endl;"
+    ],
+    "description": "Code snippet for printing to std::cout, provided the header is set"
+  }
 }
-
-
-
-
-
-
-
-
-
-
