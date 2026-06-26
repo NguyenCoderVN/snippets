@@ -21,7 +21,7 @@
     "description": "Template C++ với biến N và vòng lặp"
   },
   "coutend": {
-    "prefix": "mycoutendl",
+    "prefix": "my_cout_endl",
     "body": [
       "std::cout << ${1:message} << std::endl;"
     ],
