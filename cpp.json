@@ -1,9 +1,8 @@
 {
   "Competitive Programming Template N": {
-    "prefix": "cppst",
+    "prefix": "cpp_st",
     "body": [
-      "#include <cmath>",
-      "#include <iostream>",
+      "#include <bits/stdc++.h>",
       "",
       "using namespace std;",
       "",
@@ -21,7 +20,7 @@
     "description": "Template C++ với biến N và vòng lặp"
   },
   "coutend": {
-    "prefix": "my_cout_endl",
+    "prefix": "cpp_cout",
     "body": [
       "std::cout << ${1:message} << std::endl;"
     ],
