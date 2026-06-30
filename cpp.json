@@ -13,7 +13,7 @@
       "  int n;",
       "  cin >> n;",
       "  ",
-      "  long long ans = n;",
+      "  long long ans = n$1;",
       "  cout << ans << endl;",
       "  ",
       "  return 0;",
