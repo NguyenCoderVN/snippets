@@ -7,19 +7,16 @@
       "using namespace std;",
       "",
       "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "\t",
       "  int n;",
       "  cin >> n;",
       "  ",
-      "  long long ans = n$1;",
+      "  long long ans = 1;",
       "  cout << ans << endl;",
       "  ",
       "  return 0;",
       "}"
     ],
-    "description": "Template C++ với biến N và vòng lặp"
+    "description": "Template C++"
   },
   "coutend": {
     "prefix": "cpp_cout",
