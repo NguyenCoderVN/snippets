@@ -19,6 +19,13 @@
     ],
     "description": "Template C++"
   },
+    "cout_end": {
+    "prefix": "endl",
+    "body": [
+      "std::cout << std::endl;"
+    ],
+    "description": "End line"
+  },
   "coutend": {
     "prefix": "cpp_cout",
     "body": [
