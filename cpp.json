@@ -11,7 +11,7 @@
       "  cin >> n;",
       "  ",
       "  long long ans = 0;",
-      "  $1"
+      "  $1,",
       "  cout << ans << endl;",
       "  ",
       "  return 0;",
@@ -33,6 +33,6 @@
       "\t$0",
       "}"
     ],
-    "description": "Vòng lặp for bắt đầu từ 1 đến n-1"
+    "description": "Vòng lặp for bắt đầu từ 1 đến n"
   }
 }
