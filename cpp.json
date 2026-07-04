@@ -21,14 +21,14 @@
   "cout_end": {
     "prefix": "endl",
     "body": [
-      "std::cout << std::endl;"
+      "cout << endl;"
     ],
     "description": "End line"
   },
   "coutend": {
     "prefix": "cpp_cout",
     "body": [
-      "std::cout << ${1:message} << std::endl;"
+      "cout << ${1:message} << endl;"
     ],
     "description": "Code snippet for printing to std::cout, provided the header is set"
   },
