@@ -6,6 +6,7 @@
       "",
       "using namespace std;",
       "",
+      " /*  Description  */",
       "int main() {",
       "  int n;",
       "  cin >> n;",
