@@ -92,6 +92,18 @@
     ],
     "description": "Hàm kiểm tra các chữ số là số NT và tổng chữ số cũng là số NT"
   },
+  "GCD Recursive": {
+  "prefix": "gcd",
+  "body": [
+    "int gcdRecursive(int a, int b) {",
+    "\ta = std::abs(a);",
+    "\tb = std::abs(b);",
+    "\t",
+    "\treturn (b == 0) ? a : gcdRecursive(b, a % b);",
+    "}"
+  ],
+  "description": "Hàm tìm ước chung lớn nhất (GCD) bằng đệ quy"
+},
   "Doxygen Brief Comment": {
     "prefix": "brief",
     "body": [
