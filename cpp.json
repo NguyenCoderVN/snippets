@@ -96,8 +96,8 @@
   "Doxygen Brief Comment": {
     "prefix": "brief",
     "body": [
-      "/** @brief $1 */",
-    ]
+      "/** @brief $1 */"
+    ],
     "description": "Tạo block chú thích Doxygen ngắn gọn"
   }
 }
