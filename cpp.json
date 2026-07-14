@@ -92,5 +92,14 @@
       "}"
     ],
     "description": "Hàm kiểm tra các chữ số là số NT và tổng chữ số cũng là số NT"
+  },
+  "Doxygen Brief Comment": {
+    "prefix": "brief",
+    "body": [
+      "/**",
+      " * @brief $1",
+      " */"
+    ],
+    "description": "Tạo block chú thích Doxygen ngắn gọn"
   }
 }
