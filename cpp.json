@@ -5,7 +5,7 @@
       "#include <bits/stdc++.h>",
       "using namespace std;",
       "",
-      "/** @briedddddf  */",
+      "/** @brief  */",
       "int main() {",
       "  int      n;",
       "  cin >> n;",
