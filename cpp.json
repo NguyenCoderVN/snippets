@@ -50,7 +50,7 @@
     "description": "Vòng lặp for giảm dần từ n về 1"
   },
   "Check Prime": {
-    "prefix": "isprime",
+    "prefix": "f_isprime",
     "body": [
       "bool isPrime(int n) {",
       "\tfor (int i = 2; i * i <= n; i++)",
@@ -63,7 +63,7 @@
     "description": "Hàm kiểm tra số nguyên tố (O(sqrt(N)))"
   },
   "Check Prime Digits": {
-    "prefix": "isprimedigit",
+    "prefix": "f_isprimedigit",
     "body": [
       "bool isPrimeDigit(int n) {",
       "\tfor (; n; n /= 10)",
@@ -76,7 +76,7 @@
     "description": "Hàm kiểm tra tất cả các chữ số có phải là số nguyên tố"
   },
   "Check Total Prime Digits": {
-    "prefix": "istotalprimedigit",
+    "prefix": "f_istotalprimedigit",
     "body": [
       "bool isTotalPrimeDigit(int n) {",
       "\tint s = 0;",
@@ -93,7 +93,7 @@
     "description": "Hàm kiểm tra các chữ số là số NT và tổng chữ số cũng là số NT"
   },
   "GCD Recursive": {
-  "prefix": "gcd",
+  "prefix": "f_gcd",
   "body": [
     "int gcdRecursive(int a, int b) {",
     "\ta = std::abs(a);",
