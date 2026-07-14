@@ -3,7 +3,6 @@
     "prefix": "cpp_st",
     "body": [
       "#include <bits/stdc++.h>",
-      "",
       "using namespace std;",
       "",
       "/** @brief  */",
