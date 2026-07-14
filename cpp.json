@@ -75,5 +75,22 @@
       "}"
     ],
     "description": "Hàm kiểm tra tất cả các chữ số có phải là số nguyên tố"
+  },
+  "Check Total Prime Digits": {
+    "prefix": "istotalprimedigit",
+    "body": [
+      "bool isTotalPrimeDigit(int n) {",
+      "\tint s = 0;",
+      "\tfor (; n; n /= 10) {",
+      "\t\tint digit = n % 10;",
+      "\t\ts += digit;",
+      "\t\tif (!isPrime(digit))",
+      "\t\t\treturn false;",
+      "\t}",
+      "",
+      "\treturn isPrime(s);",
+      "}"
+    ],
+    "description": "Hàm kiểm tra các chữ số là số NT và tổng chữ số cũng là số NT"
   }
 }
