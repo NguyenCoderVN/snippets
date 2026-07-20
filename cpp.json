@@ -1,4 +1,30 @@
 {
+  "Competitive Programming Main Array": {
+    "prefix": "1int",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "const long long mod = 1000000007;",
+      "",
+      "int main() {",
+      "\tint n;",
+      "\tcin >> n;",
+      "\tint a[n];",
+      "",
+      "\tfor (int i = 0; i < n; i++) {",
+      "\t\tcin >> a[i];",
+      "\t}",
+      "",
+      "\tfor (int i = 0; i < n; i++) {",
+      "\t\t",
+      "\t}",
+      "",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Khung code C++ nhập mảng"
+  },
   "Competitive Programming Template N": {
     "prefix": "cpp_st",
     "body": [
