@@ -1,29 +1,38 @@
 {
+  "Mod Constant": {
+    "prefix": "mod",
+    "body": [
+      "const long long mod = 1000000007;"
+    ],
+    "description": "Khai báo hằng số Mod 1e9+7"
+  },
   "Competitive Programming Main Array": {
     "prefix": "1int",
     "body": [
       "#include <bits/stdc++.h>",
-      "",
       "using namespace std;",
+      "",
       "const long long mod = 1000000007;",
       "",
       "int main() {",
+      "\tios_base::sync_with_stdio(false);",
+      "\tcin.tie(NULL);",
+      "\t",
       "\tint n;",
       "\tcin >> n;",
-      "\tint a[n];",
-      "",
+      "\tvector<int> a(n);",
       "\tfor (int i = 0; i < n; i++) {",
       "\t\tcin >> a[i];",
       "\t}",
       "",
       "\tfor (int i = 0; i < n; i++) {",
-      "\t\t",
+      "\t\t$0",
       "\t}",
       "",
       "\treturn 0;",
       "}"
     ],
-    "description": "Khung code C++ nhập mảng"
+    "description": "Khung code C++ nhập mảng động"
   },
   "Competitive Programming Template N": {
     "prefix": "cpp_st",
@@ -31,33 +40,33 @@
       "#include <bits/stdc++.h>",
       "using namespace std;",
       "",
-      "/** @brief  */",
+      "/** @brief $1 */",
       "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "  int n;",
-      "  cin >> n;",
-      "  ",
-      "  $1",
-      "  ",
-      "  return 0;",
+      "\tios_base::sync_with_stdio(false);",
+      "\tcin.tie(NULL);",
+      "",
+      "\tint n;",
+      "\tcin >> n;",
+      "\t$0",
+      "",
+      "\treturn 0;",
       "}"
     ],
-    "description": "Template C++"
+    "description": "Template C++ chuẩn"
   },
   "cout_end": {
     "prefix": "endl",
     "body": [
-      "cout << endl;"
+      "cout << '\\n';"
     ],
-    "description": "End line"
+    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
   },
   "coutend": {
     "prefix": "cpp_cout",
     "body": [
-      "cout << ${1:message} << endl;"
+      "cout << ${1:message} << '\\n';"
     ],
-    "description": "Code snippet for printing to std::cout, provided the header is set"
+    "description": "In thông điệp và xuống dòng"
   },
   "For Loop (Start at 1)": {
     "prefix": "foradd",
@@ -80,63 +89,59 @@
   "Check Prime": {
     "prefix": "f_isprime",
     "body": [
-      "bool isPrime(int n) {",
-      "\tfor (int i = 2; i * i <= n; i++)",
-      "\t\tif (n % i == 0)",
-      "\t\t\treturn false;",
-      "",
-      "\treturn n >= 2;",
+      "bool isPrime(long long n) {",
+      "\tif (n < 2) return false;",
+      "\tfor (long long i = 2; i * i <= n; i++) {",
+      "\t\tif (n % i == 0) return false;",
+      "\t}",
+      "\treturn true;",
       "}"
     ],
-    "description": "Hàm kiểm tra số nguyên tố (O(sqrt(N)))"
+    "description": "Hàm kiểm tra số nguyên tố O(sqrt(N))"
   },
   "Check Prime Digits": {
     "prefix": "f_isprimedigit",
     "body": [
-      "bool isPrimeDigit(int n) {",
-      "\tfor (; n; n /= 10)",
-      "\t\tif (!isPrime(n % 10))",
-      "\t\t\treturn false;",
-      "",
+      "bool isPrimeDigit(long long n) {",
+      "\tfor (; n > 0; n /= 10) {",
+      "\t\tif (!isPrime(n % 10)) return false;",
+      "\t}",
       "\treturn true;",
       "}"
     ],
-    "description": "Hàm kiểm tra tất cả các chữ số có phải là số nguyên tố"
+    "description": "Kiểm tra tất cả chữ số là số nguyên tố"
   },
   "Check Total Prime Digits": {
     "prefix": "f_istotalprimedigit",
     "body": [
-      "bool isTotalPrimeDigit(int n) {",
-      "\tint s = 0;",
-      "\tfor (; n; n /= 10) {",
-      "\t\tint digit = n % 10;",
-      "\t\ts += digit;",
-      "\t\tif (!isPrime(digit))",
-      "\t\t\treturn false;",
+      "bool isTotalPrimeDigit(long long n) {",
+      "\tlong long sum = 0;",
+      "\tfor (long long temp = n; temp > 0; temp /= 10) {",
+      "\t\tint digit = temp % 10;",
+      "\t\tsum += digit;",
+      "\t\tif (!isPrime(digit)) return false;",
       "\t}",
-      "",
-      "\treturn isPrime(s);",
+      "\treturn isPrime(sum);",
       "}"
     ],
-    "description": "Hàm kiểm tra các chữ số là số NT và tổng chữ số cũng là số NT"
+    "description": "Kiểm tra từng chữ số và tổng các chữ số đều là số NT"
   },
   "GCD Recursive": {
-  "prefix": "f_gcd",
-  "body": [
-    "int gcdRecursive(int a, int b) {",
-    "\ta = std::abs(a);",
-    "\tb = std::abs(b);",
-    "\t",
-    "\treturn (b == 0) ? a : gcdRecursive(b, a % b);",
-    "}"
-  ],
-  "description": "Hàm tìm ước chung lớn nhất (GCD) bằng đệ quy"
-},
+    "prefix": "f_gcd",
+    "body": [
+      "long long gcdRecursive(long long a, long long b) {",
+      "\ta = std::abs(a);",
+      "\tb = std::abs(b);",
+      "\treturn (b == 0) ? a : gcdRecursive(b, a % b);",
+      "}"
+    ],
+    "description": "Hàm tìm UCLN (GCD)"
+  },
   "Doxygen Brief Comment": {
     "prefix": "brief",
     "body": [
       "/** @brief $1 */"
     ],
-    "description": "Tạo block chú thích Doxygen ngắn gọn"
+    "description": "Block chú thích Doxygen"
   }
 }
