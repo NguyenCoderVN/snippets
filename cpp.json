@@ -1,6 +1,6 @@
 {
   "Mod Constant": {
-    "prefix": "mod",
+    "prefix": "mod7",
     "body": [
       "const long long mod = 1000000007;"
     ],
