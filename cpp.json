@@ -112,8 +112,8 @@
     "bien n": {
     "prefix": "bienn",
     "body": [
-      "\t int n;",
-      "\tcin >> n;"
+      "int n;",
+      "cin >> n;"
     ],
     "description": "Xuống dòng "
   },
