@@ -6,6 +6,20 @@
     ],
     "description": "Khai báo hằng số Mod 1e9+7"
   },
+    "Max Constant": {
+    "prefix": "maxi",
+    "body": [
+      "\tint $0 = std::numeric_limits<int>::max();"
+    ],
+    "description": "Khai báo hằng số Mod 1e9+7"
+  },
+    "Min Constant": {
+    "prefix": "maxi",
+    "body": [
+      "\tint $0 = std::numeric_limits<int>::min();"
+    ],
+    "description": "Khai báo hằng số Mod 1e9+7"
+  },
   "Competitive Programming Main Array": {
     "prefix": "1int",
     "body": [
@@ -19,13 +33,13 @@
       "\t",
       "\tint n;",
       "\tcin >> n;",
-      "\tvector<int> a(n);",
+      "\tint a[n];",
       "\tfor (int i = 0; i < n; i++) {",
       "\t\tcin >> a[i];",
       "\t}",
-      "",
+      "\t$0",
       "\tfor (int i = 0; i < n; i++) {",
-      "\t\t$0",
+      "\t",
       "\t}",
       "",
       "\treturn 0;",
