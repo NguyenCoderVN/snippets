@@ -102,8 +102,6 @@
       "\tios_base::sync_with_stdio(false);",
       "\tcin.tie(NULL);",
       "",
-      "\tint n;",
-      "\tcin >> n;",
       "\t$0",
       "",
       "\treturn 0;",
@@ -111,10 +109,25 @@
     ],
     "description": "Template C++ chuẩn"
   },
-  "cout_end": {
-    "prefix": "endl",
+    "cout_end": {
+    "prefix": "varn",
     "body": [
-      "cout << '\\n';"
+      "\t int n",
+      "\tcin >> n;"
+    ],
+    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
+  },
+  "cout_end": {
+    "prefix": "coute",
+    "body": [
+      "cout << $0 << '\\n';"
+    ],
+    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
+  },
+    "cout_blank": {
+    "prefix": "coutb",
+    "body": [
+      "cout << $0 << ' ';"
     ],
     "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
   },
