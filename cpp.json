@@ -1,4 +1,19 @@
 {
+  "Check Sum of Digits is Prime": {
+    "prefix": "f_isdigitsumprime",
+    "body": [
+      "bool isDigitSumPrime(long long n) {",
+      "\tif (n < 0) n = -n;",
+      "\tlong long sum = 0;",
+      "\twhile (n > 0) {",
+      "\t\tsum += n % 10;",
+      "\t\tn /= 10;",
+      "\t}",
+      "\treturn isPrime(sum);",
+      "}"
+    ],
+    "description": "Check if the sum of all digits of a number is prime"
+  },
   "Check Perfect Square": {
     "prefix": "f_isperfectsquare",
     "body": [
