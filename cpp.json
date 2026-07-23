@@ -106,18 +106,18 @@
     ],
     "description": "Vòng lặp for giảm dần từ n về 1"
   },
-  "Check Prime": {
+ "Check Prime (Short)": {
     "prefix": "f_isprime",
     "body": [
-      "bool isPrime(long long n) {",
-      "\tif (n < 2) return false;",
-      "\tfor (long long i = 2; i * i <= n; i++) {",
-      "\t\tif (n % i == 0) return false;",
-      "\t}",
-      "\treturn true;",
+      "bool isPrime(int n) {",
+      "\tfor (int i = 2; i * i <= n; i++)",
+      "\t\tif (n % i == 0)",
+      "\t\t\treturn false;",
+      "",
+      "\treturn n >= 2;",
       "}"
     ],
-    "description": "Hàm kiểm tra số nguyên tố O(sqrt(N))"
+    "description": "Short prime check function (O(sqrt(N)))"
   },
   "Check Prime Digits": {
     "prefix": "f_isprimedigit",
