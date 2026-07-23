@@ -60,17 +60,18 @@
   "Mang 1 chieu a": {
     "prefix": "mang1ca",
     "body": [
-      "\tint n;",
-      "\tcin >> n;",
-      "\tint a[n];",
+      "int n;",
+      "cin >> n;",
+      "int a[n];",
       "",
-      "\tfor (int i = 0; i < n; i++) {",
-      "\t\tcin >> a[i];",
-      "\t}",
+      "for (int i = 0; i < n; i++) {",
+      "\tcin >> a[i];",
+      "}",
+      "",
       "\t$0",
-      "\tfor (int i = 0; i < n; i++) {",
-      "\t",
-      "\t}"
+      "for (int i = 0; i < n; i++) {",
+      "",
+      "}"
     ],
     "description": "Khung code C++ nhập mảng động"
   },
