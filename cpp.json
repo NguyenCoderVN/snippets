@@ -21,7 +21,7 @@
     "description": "Khai báo hằng số Mod 1e9+7"
   },
   "Competitive Programming Main Array": {
-    "prefix": "v1_a",
+    "prefix": "mang1ca",
     "body": [
       "\tint n;",
       "\tcin >> n;",
@@ -38,7 +38,7 @@
     "description": "Khung code C++ nhập mảng động"
   },
     "Competitive Programming Main Array": {
-    "prefix": "v1_ab",
+    "prefix": "mang1cab",
     "body": [
       "\tint n,m;",
       "\tcin >> n>>m;",
