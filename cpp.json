@@ -109,7 +109,7 @@
     ],
     "description": "Template C++ chuẩn"
   },
-    "cout_end": {
+    "varn": {
     "prefix": "varn",
     "body": [
       "\t int n",
@@ -117,7 +117,7 @@
     ],
     "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
   },
-  "cout_end": {
+  "coute": {
     "prefix": "coute",
     "body": [
       "cout << $0 << '\\n';"
@@ -130,13 +130,6 @@
       "cout << $0 << ' ';"
     ],
     "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
-  },
-  "coutend": {
-    "prefix": "cpp_cout",
-    "body": [
-      "cout << ${1:message} << '\\n';"
-    ],
-    "description": "In thông điệp và xuống dòng"
   },
   "For Loop (Start at 1)": {
     "prefix": "foradd",
