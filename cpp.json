@@ -109,13 +109,13 @@
     ],
     "description": "Template C++ chuẩn"
   },
-    "varn": {
-    "prefix": "varn",
+    "bien n": {
+    "prefix": "bienn",
     "body": [
       "\t int n",
       "\tcin >> n;"
     ],
-    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
+    "description": "Xuống dòng "
   },
   "coute": {
     "prefix": "coute",
