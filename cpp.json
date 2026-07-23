@@ -21,29 +21,36 @@
     "description": "Khai báo hằng số Mod 1e9+7"
   },
   "Competitive Programming Main Array": {
-    "prefix": "1int",
+    "prefix": "v1a",
     "body": [
-      "#include <bits/stdc++.h>",
-      "",
-      "using namespace std;",
-      "",
-      "int main() {",
-      "\tios_base::sync_with_stdio(false);",
-      "\tcin.tie(NULL);",
-      "\t",
       "\tint n;",
       "\tcin >> n;",
       "\tint a[n];",
+      "",
       "\tfor (int i = 0; i < n; i++) {",
       "\t\tcin >> a[i];",
       "\t}",
       "\t$0",
       "\tfor (int i = 0; i < n; i++) {",
       "\t",
+      "\t}"
+    ],
+    "description": "Khung code C++ nhập mảng động"
+  },
+    "Competitive Programming Main Array": {
+    "prefix": "v1ab",
+    "body": [
+      "\tint n,m;",
+      "\tcin >> n>>m;",
+      "\tint a[n];",
+      "",
+      "\tfor (int i = 0; i < n; i++) {",
+      "\t\tcin >> a[i];",
       "\t}",
       "",
-      "\treturn 0;",
-      "}"
+      "\tfor (int i = 0; i < m; i++) {",
+      "\t\tcin >> b[i];",
+      "\t}"
     ],
     "description": "Khung code C++ nhập mảng động"
   },
@@ -51,9 +58,9 @@
     "prefix": "cpp_st",
     "body": [
       "#include <bits/stdc++.h>",
+      "",
       "using namespace std;",
       "",
-      "/** @brief $1 */",
       "int main() {",
       "\tios_base::sync_with_stdio(false);",
       "\tcin.tie(NULL);",
