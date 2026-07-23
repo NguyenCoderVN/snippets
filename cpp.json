@@ -14,7 +14,7 @@
     "description": "Khai báo hằng số Mod 1e9+7"
   },
     "Min Constant": {
-    "prefix": "maxi",
+    "prefix": "mini",
     "body": [
       "\tint $0 = std::numeric_limits<int>::min();"
     ],
