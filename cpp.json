@@ -1,4 +1,26 @@
 {
+  "Check Perfect Square": {
+    "prefix": "f_isperfectsquare",
+    "body": [
+      "bool isPerfectSquare(long long n) {",
+      "\tif (n < 0)",
+      "\t\treturn false;",
+      "\tif (n == 0 || n == 1)",
+      "\t\treturn true;",
+      "",
+      "\tlong long x = n;",
+      "\tlong long y = (x + n / x) / 2;",
+      "",
+      "\twhile (y < x) {",
+      "\t\tx = y;",
+      "\t\ty = (x + n / x) / 2;",
+      "\t}",
+      "",
+      "\treturn (n / x == x && n % x == 0);",
+      "}"
+    ],
+    "description": "Check if a number is a perfect square using Newton's integer square root method"
+  },
   "Mod Constant": {
     "prefix": "mod7",
     "body": [
