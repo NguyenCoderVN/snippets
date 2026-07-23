@@ -146,6 +146,21 @@
     ],
     "description": "Kiểm tra từng chữ số và tổng các chữ số đều là số NT"
   },
+  "Check Palindrome Number": {
+    "prefix": "f_ispalindrome",
+    "body": [
+      "bool isPalindromic(int n) {",
+      "\tlong long ans = 0;",
+      "\tint temp = n;",
+      "\twhile (temp > 0) {",
+      "\t\tans = 10 * ans + temp % 10;",
+      "\t\ttemp /= 10;",
+      "\t}",
+      "\treturn (ans == n);",
+      "}"
+    ],
+    "description": "Check if an integer is a palindrome (overflow-safe with long long)"
+  },
   "GCD Recursive": {
     "prefix": "f_gcd",
     "body": [
