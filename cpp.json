@@ -92,7 +92,7 @@
     ],
     "description": "Khung code C++ nhập mảng động"
   },
-  "Competitive Programming Template N": {
+  "Competitive Programming": {
     "prefix": "cpp_st",
     "body": [
       "#include <bits/stdc++.h>",
