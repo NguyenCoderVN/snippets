@@ -1,4 +1,15 @@
 {
+  "Cin Test Loop": {
+  "prefix": "test",
+  "body": [
+    "cin >> ${1:test};",
+    "int ${2:x};",
+    "while (${1:test}-- && cin >> ${2:x}) {",
+    "    $0",
+    "}"
+  ],
+  "description": "Nhập số test cases và vòng lặp while cin x"
+},
   "Counting Frequency Array": {
     "prefix": "mangpp",
     "body": [
