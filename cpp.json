@@ -100,7 +100,7 @@
     "body": [
       "\tint n,m;",
       "\tcin >> n>>m;",
-      "\tint a[n];",
+      "\tint a[n], b[m];",
       "",
       "\tfor (int i = 0; i < n; i++) {",
       "\t\tcin >> a[i];",
