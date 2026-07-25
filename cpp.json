@@ -1,4 +1,35 @@
 {
+  {
+  "CP Template": {
+    "prefix": "cppmangpp",
+    "description": "Code danh dau mang theo nguyen van",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "/**",
+      "* @brief",
+      "* */",
+      "int c[1000001];",
+      "int main() {",
+      "  ios_base::sync_with_stdio(false);",
+      "  cin.tie(NULL);",
+      "",
+      "  int n;",
+      "  cin >> n;",
+      "  int a[n];",
+      "",
+      "  for (int i = 0; i < n; i++) {",
+      "    cin >> a[i];",
+      "    c[a[i]] = 1;",
+      "  }",
+      "",
+      "  return 0;",
+      "}"
+    ]
+  }
+},
   "Cin Test Loop": {
   "prefix": "test",
   "body": [
