@@ -27,20 +27,19 @@
       "  return 0;",
       "}"
     ]
-  }
-},
+  },
   "Cin Test Loop": {
-  "prefix": "test",
-  "body": [
-    "int test;",
-    "cin >> ${1:test};",
-    "int ${2:x};",
-    "while (${1:test}-- && cin >> ${2:x}) {",
-    "    $0",
-    "}"
-  ],
-  "description": "Nhập số test cases và vòng lặp while cin x"
-},
+    "prefix": "test",
+    "body": [
+      "int test;",
+      "cin >> ${1:test};",
+      "int ${2:x};",
+      "while (${1:test}-- && cin >> ${2:x}) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Nhập số test cases và vòng lặp while cin x"
+  },
   "Counting Frequency Array": {
     "prefix": "mangpp",
     "body": [
@@ -105,19 +104,19 @@
     ],
     "description": "Khai báo hằng số Mod 1e9+7"
   },
-    "Max Constant": {
+  "Max Constant": {
     "prefix": "maxi",
     "body": [
       "\tint $0 = std::numeric_limits<int>::max();"
     ],
-    "description": "Khai báo hằng số Mod 1e9+7"
+    "description": "Khai báo hằng số Max int"
   },
-    "Min Constant": {
+  "Min Constant": {
     "prefix": "mini",
     "body": [
       "\tint $0 = std::numeric_limits<int>::min();"
     ],
-    "description": "Khai báo hằng số Mod 1e9+7"
+    "description": "Khai báo hằng số Min int"
   },
   "Mang 1 chieu a": {
     "prefix": "mang1ca",
@@ -137,7 +136,7 @@
     ],
     "description": "Khung code C++ nhập mảng động"
   },
-    "Mang 1 chieu a b": {
+  "Mang 1 chieu a b": {
     "prefix": "mang1cab",
     "body": [
       "\tint n,m;",
@@ -175,27 +174,27 @@
     ],
     "description": "Template C++ chuẩn"
   },
-    "bien n": {
+  "bien n": {
     "prefix": "bienn",
     "body": [
       "int n;",
       "cin >> n;"
     ],
-    "description": "Xuống dòng "
+    "description": "Khai báo và nhập n"
   },
   "coute": {
     "prefix": "coute",
     "body": [
       "cout << $0 << '\\n';"
     ],
-    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
+    "description": "Xuống dòng nhanh"
   },
-    "cout_blank": {
+  "cout_blank": {
     "prefix": "coutb",
     "body": [
       "cout << $0 << ' ';"
     ],
-    "description": "Xuống dòng nhanh (tránh dùng endl làm xả buffer liên tục)"
+    "description": "In khoảng trắng"
   },
   "For Loop (Start at 1)": {
     "prefix": "foradd",
@@ -215,7 +214,7 @@
     ],
     "description": "Vòng lặp for giảm dần từ n về 1"
   },
- "Check Prime (Short)": {
+  "Check Prime (Short)": {
     "prefix": "f_isprime",
     "body": [
       "bool isPrime(int n) {",
@@ -268,7 +267,7 @@
       "\treturn (ans == n);",
       "}"
     ],
-    "description": "Check if an integer is a palindrome (overflow-safe with long long)"
+    "description": "Check if an integer is a palindrome"
   },
   "GCD Recursive": {
     "prefix": "f_gcd",
