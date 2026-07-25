@@ -1,4 +1,13 @@
 {
+  "Print Array 1D": {
+    "prefix": "fori0",
+    "body": [
+      "for (int i = 0; i < n; i++) {",
+      "\tcout << a[i] << \" \";",
+      "}"
+    ],
+    "description": "In các phần tử của mảng a1D ngăn cách bởi khoảng trắng"
+  },
   "CP Template": {
     "prefix": "cppmangpp",
     "description": "Code danh dau mang theo nguyen van",
