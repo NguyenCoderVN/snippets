@@ -2,6 +2,7 @@
   "Cin Test Loop": {
   "prefix": "test",
   "body": [
+    "int test;",
     "cin >> ${1:test};",
     "int ${2:x};",
     "while (${1:test}-- && cin >> ${2:x}) {",
