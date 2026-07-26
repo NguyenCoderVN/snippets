@@ -1,16 +1,25 @@
 {
-  "Print Array 1D": {
-    "prefix": "fori0",
+  "CP Template Standard": {
+    "prefix": "cpp_st",
     "body": [
-      "for (int i = 0; i < n; i++) {",
-      "\tcout << a[i] << \" \";",
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "/**",
+      " * @brief $0",
+      " */",
+      "int main() {",
+      "\tios_base::sync_with_stdio(false);",
+      "\tcin.tie(NULL);",
+      "",
+      "\treturn 0;",
       "}"
     ],
-    "description": "In các phần tử của mảng a1D ngăn cách bởi khoảng trắng"
+    "description": "Standard C++ Competitive Programming Template"
   },
-  "CP Template": {
+  "CP Template Frequency Array": {
     "prefix": "cppmangpp",
-    "description": "Code danh dau mang theo nguyen van",
     "body": [
       "#include <bits/stdc++.h>",
       "",
@@ -21,55 +30,154 @@
       " */",
       "int c[1000001];",
       "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
+      "\tios_base::sync_with_stdio(false);",
+      "\tcin.tie(NULL);",
       "",
-      "  int n;",
-      "  cin >> n;",
-      "  int a[n];",
+      "\tint n;",
+      "\tcin >> n;",
+      "\tint a[n];",
       "",
-      "  for (int i = 0; i < n; i++) {",
-      "    cin >> a[i];",
-      "    c[a[i]] = 1;",
-      "  }",
+      "\tfor (int i = 0; i < n; i++) {",
+      "\t\tcin >> a[i];",
+      "\t\tc[a[i]] = 1;",
+      "\t}",
       "",
-      "  return 0;",
+      "\treturn 0;",
       "}"
-    ]
+    ],
+    "description": "C++ Template with Frequency / Marking Array"
   },
-  "Cin Test Loop": {
+
+  "Test Case Loop": {
     "prefix": "test",
     "body": [
       "int test;",
       "cin >> ${1:test};",
       "int ${2:x};",
       "while (${1:test}-- && cin >> ${2:x}) {",
-      "    $0",
+      "\t$0",
       "}"
     ],
-    "description": "Nhập số test cases và vòng lặp while cin x"
+    "description": "Loop through test cases and input variable x"
   },
-  "Counting Frequency Array": {
-    "prefix": "mangpp",
+  "Input Variable N": {
+    "prefix": "bienn",
     "body": [
-      "int c[1000001];",
+      "int n;",
+      "cin >> n;"
+    ],
+    "description": "Declare and read integer n"
+  },
+  "Fast Output Newline": {
+    "prefix": "coute",
+    "body": [
+      "cout << $0 << '\\n';"
+    ],
+    "description": "Print expression with newline"
+  },
+  "Fast Output Space": {
+    "prefix": "coutb",
+    "body": [
+      "cout << $0 << ' ';"
+    ],
+    "description": "Print expression with space separator"
+  },
+
+  "For Loop Ascending": {
+    "prefix": "forint",
+    "body": [
+      "for (int ${1:i} = 0; ${1:i} < n; ${1:i}++) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Ascending for loop (0 to n-1)"
+  },
+  "For Loop Descending": {
+    "prefix": "forintdown",
+    "body": [
+      "for (int ${1:i} = n - 1; ${1:i} >= 0; ${1:i}--) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Descending for loop (n-1 down to 0)"
+  },
+
+  "Read 1D Array": {
+    "prefix": "mang1ca",
+    "body": [
       "int n;",
       "cin >> n;",
       "int a[n];",
-      "int max_val = -1e9;",
       "",
       "for (int i = 0; i < n; i++) {",
       "\tcin >> a[i];",
-      "\tc[a[i]]=1;",
-      "\tmax_val = max(max_val, a[i]);",
       "}",
       "",
-      "for (int i = 0; i <= max_val; i++) {",
+      "$0",
+      "for (int i = 0; i < n; i++) {",
+      "",
       "}"
     ],
-    "description": "Counting element frequency using array c"
+    "description": "Read single 1D array"
   },
-  "Check Sum of Digits is Prime": {
+  "Read Two 1D Arrays": {
+    "prefix": "mang1cab",
+    "body": [
+      "int n, m;",
+      "cin >> n >> m;",
+      "int a[n], b[m];",
+      "",
+      "for (int i = 0; i < n; i++) {",
+      "\tcin >> a[i];",
+      "}",
+      "",
+      "for (int i = 0; i < m; i++) {",
+      "\tcin >> b[i];",
+      "}"
+    ],
+    "description": "Read two 1D arrays a and b"
+  },
+  "Check Prime": {
+    "prefix": "f_isprime",
+    "body": [
+      "bool isPrime(int n) {",
+      "\tfor (int i = 2; i * i <= n; i++)",
+      "\t\tif (n % i == 0)",
+      "\t\t\treturn false;",
+      "",
+      "\treturn n >= 2;",
+      "}"
+    ],
+    "description": "Check if a number is prime (O(sqrt(N)))"
+  },
+  "Check Prime Digits": {
+    "prefix": "f_isprimedigit",
+    "body": [
+      "bool isPrimeDigit(long long n) {",
+      "\tfor (; n > 0; n /= 10) {",
+      "\t\tif (!isPrime(n % 10)) return false;",
+      "\t}",
+      "\treturn true;",
+      "}"
+    ],
+    "description": "Check if all digits of a number are prime digits"
+  },
+  "Check Digits and Digit Sum Prime": {
+    "prefix": "f_istotalprimedigit",
+    "body": [
+      "bool isTotalPrimeDigit(long long n) {",
+      "\tlong long sum = 0;",
+      "\tfor (long long temp = n; temp > 0; temp /= 10) {",
+      "\t\tint digit = temp % 10;",
+      "\t\tsum += digit;",
+      "\t\tif (!isPrime(digit)) return false;",
+      "\t}",
+      "\treturn isPrime(sum);",
+      "}"
+    ],
+    "description": "Check if all digits and their sum are prime numbers"
+  },
+  "Check Digit Sum Prime": {
     "prefix": "f_isdigitsumprime",
     "body": [
       "bool isDigitSumPrime(long long n) {",
@@ -83,6 +191,21 @@
       "}"
     ],
     "description": "Check if the sum of all digits of a number is prime"
+  },
+  "Check Palindrome": {
+    "prefix": "f_ispalindrome",
+    "body": [
+      "bool isPalindromic(int n) {",
+      "\tlong long ans = 0;",
+      "\tint temp = n;",
+      "\twhile (temp > 0) {",
+      "\t\tans = 10 * ans + temp % 10;",
+      "\t\ttemp /= 10;",
+      "\t}",
+      "\treturn (ans == n);",
+      "}"
+    ],
+    "description": "Check if an integer is a palindrome"
   },
   "Check Perfect Square": {
     "prefix": "f_isperfectsquare",
@@ -104,179 +227,7 @@
       "\treturn (n / x == x && n % x == 0);",
       "}"
     ],
-    "description": "Check if a number is a perfect square using Newton's integer square root method"
-  },
-  "Mod Constant": {
-    "prefix": "mod7",
-    "body": [
-      "const long long mod = 1000000007;"
-    ],
-    "description": "Khai báo hằng số Mod 1e9+7"
-  },
-  "Max Constant": {
-    "prefix": "maxi",
-    "body": [
-      "\tint $0 = std::numeric_limits<int>::max();"
-    ],
-    "description": "Khai báo hằng số Max int"
-  },
-  "Min Constant": {
-    "prefix": "mini",
-    "body": [
-      "\tint $0 = std::numeric_limits<int>::min();"
-    ],
-    "description": "Khai báo hằng số Min int"
-  },
-  "Mang 1 chieu a": {
-    "prefix": "mang1ca",
-    "body": [
-      "int n;",
-      "cin >> n;",
-      "int a[n];",
-      "",
-      "for (int i = 0; i < n; i++) {",
-      "\tcin >> a[i];",
-      "}",
-      "",
-      "$0",
-      "for (int i = 0; i < n; i++) {",
-      "",
-      "}"
-    ],
-    "description": "Khung code C++ nhập mảng động"
-  },
-  "Mang 1 chieu a b": {
-    "prefix": "mang1cab",
-    "body": [
-      "\tint n,m;",
-      "\tcin >> n>>m;",
-      "\tint a[n], b[m];",
-      "",
-      "\tfor (int i = 0; i < n; i++) {",
-      "\t\tcin >> a[i];",
-      "\t}",
-      "",
-      "\tfor (int i = 0; i < m; i++) {",
-      "\t\tcin >> b[i];",
-      "\t}"
-    ],
-    "description": "Khung code C++ nhập mảng động"
-  },
-  "Competitive Programming": {
-    "prefix": "cpp_st",
-    "body": [
-      "#include <bits/stdc++.h>",
-      "",
-      "using namespace std;",
-      "",
-      "/**",
-      "* @brief $0",
-      "*/",
-      "int main() {",
-      "\tios_base::sync_with_stdio(false);",
-      "\tcin.tie(NULL);",
-      "",
-      "",
-      "",
-      "\treturn 0;",
-      "}"
-    ],
-    "description": "Template C++ chuẩn"
-  },
-  "bien n": {
-    "prefix": "bienn",
-    "body": [
-      "int n;",
-      "cin >> n;"
-    ],
-    "description": "Khai báo và nhập n"
-  },
-  "coute": {
-    "prefix": "coute",
-    "body": [
-      "cout << $0 << '\\n';"
-    ],
-    "description": "Xuống dòng nhanh"
-  },
-  "cout_blank": {
-    "prefix": "coutb",
-    "body": [
-      "cout << $0 << ' ';"
-    ],
-    "description": "In khoảng trắng"
-  },
-    "For Loop (Start at 1)": {
-    "prefix": "forint",
-    "body": [
-      "for (int ${1:i} = 0; ${1:i} < n; ${1:i}++) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Vòng lặp for bắt đầu từ 1 đến n"
-    },
-  "For int down": {
-    "prefix": "forintdown",
-    "body": [
-      "for (int ${1:i} = n-1; ${1:i} >= 0; ${1:i}++) {",
-      "\t$0",
-      "}"
-    ],
-    "description": "Vòng lặp for bắt đầu từ 1 đến n"
-  },
-  "Check Prime (Short)": {
-    "prefix": "f_isprime",
-    "body": [
-      "bool isPrime(int n) {",
-      "\tfor (int i = 2; i * i <= n; i++)",
-      "\t\tif (n % i == 0)",
-      "\t\t\treturn false;",
-      "",
-      "\treturn n >= 2;",
-      "}"
-    ],
-    "description": "Short prime check function (O(sqrt(N)))"
-  },
-  "Check Prime Digits": {
-    "prefix": "f_isprimedigit",
-    "body": [
-      "bool isPrimeDigit(long long n) {",
-      "\tfor (; n > 0; n /= 10) {",
-      "\t\tif (!isPrime(n % 10)) return false;",
-      "\t}",
-      "\treturn true;",
-      "}"
-    ],
-    "description": "Kiểm tra tất cả chữ số là số nguyên tố"
-  },
-  "Check Total Prime Digits": {
-    "prefix": "f_istotalprimedigit",
-    "body": [
-      "bool isTotalPrimeDigit(long long n) {",
-      "\tlong long sum = 0;",
-      "\tfor (long long temp = n; temp > 0; temp /= 10) {",
-      "\t\tint digit = temp % 10;",
-      "\t\tsum += digit;",
-      "\t\tif (!isPrime(digit)) return false;",
-      "\t}",
-      "\treturn isPrime(sum);",
-      "}"
-    ],
-    "description": "Kiểm tra từng chữ số và tổng các chữ số đều là số NT"
-  },
-  "Check Palindrome Number": {
-    "prefix": "f_ispalindrome",
-    "body": [
-      "bool isPalindromic(int n) {",
-      "\tlong long ans = 0;",
-      "\tint temp = n;",
-      "\twhile (temp > 0) {",
-      "\t\tans = 10 * ans + temp % 10;",
-      "\t\ttemp /= 10;",
-      "\t}",
-      "\treturn (ans == n);",
-      "}"
-    ],
-    "description": "Check if an integer is a palindrome"
+    "description": "Check if a number is a perfect square using Newton's method"
   },
   "GCD Recursive": {
     "prefix": "f_gcd",
@@ -287,6 +238,12 @@
       "\treturn (b == 0) ? a : gcdRecursive(b, a % b);",
       "}"
     ],
-    "description": "Hàm tìm UCLN (GCD)"
+    "description": "Calculate Greatest Common Divisor (GCD) recursively"
+  },
+  "Modulus Constant": {
+    "prefix": "mod7",
+    "body": [
+      "const long long mod = 1000000007;"
+    ],
+    "description": "Declare Modulo constant 1e9+7"
   }
-}
