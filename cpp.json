@@ -1,4 +1,21 @@
 {
+  "Sieve of Eratosthenes (Composite)": {
+    "prefix": "composite",
+    "body": [
+      "bool isComposite[1000005] = {1, 1};",
+      "",
+      "void composite() {",
+      "  for (int i = 2; i <= 1000; ++i) {",
+      "    if (!isComposite[i]) {",
+      "      for (int j = i * i; j <= 1000000; j += i) {",
+      "        isComposite[j] = 1;",
+      "      }",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "Sieve of Eratosthenes (mark composite numbers)"
+  },
   "CP Template Standard": {
     "prefix": "cpp_st",
     "body": [
