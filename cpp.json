@@ -241,7 +241,7 @@
     "description": "Calculate Greatest Common Divisor (GCD) recursively"
   },
   "Modulus Constant": {
-    "prefix": "mod7",
+    "prefix": "mod",
     "body": [
       "const long long mod = 1000000007;"
     ],
