@@ -104,6 +104,7 @@
     "prefix": "forint",
     "body": [
       "for (int ${1:i} = 0; ${1:i} < n; ${1:i}++) {",
+      "",
       "}"
     ],
     "description": "Ascending for loop (0 to n-1)"
