@@ -2,6 +2,8 @@
   "Fibonacci Array Setup and Check": {
     "prefix": "fibo",
     "body": [
+      "#include <algorithm>",
+      "",
       "long long fibo[94] = {0};",
       "void setFibo() {",
       "    fibo[0] = 0;",
@@ -36,7 +38,10 @@
   "CP Template Standard": {
     "prefix": "cpp_st",
     "body": [
-      "#include <bits/stdc++.h>",
+      "#include <iostream>",
+      "#include <vector>",
+      "#include <algorithm>",
+      "#include <cmath>",
       "",
       "using namespace std;",
       "",
@@ -48,12 +53,15 @@
       "    return 0;",
       "}"
     ],
-    "description": "Standard C++ Competitive Programming Template"
+    "description": "Standard C++ Competitive Programming Template (Standard Libraries)"
   },
   "CP Template Frequency Array": {
     "prefix": "cppmangpp",
     "body": [
-      "#include <bits/stdc++.h>",
+      "#include <iostream>",
+      "#include <vector>",
+      "#include <algorithm>",
+      "#include <cmath>",
       "",
       "using namespace std;",
       "",
@@ -72,10 +80,11 @@
       "        c[a[i]] = 1;",
       "    }",
       "",
+      "    $0",
       "    return 0;",
       "}"
     ],
-    "description": "C++ Template with Frequency / Marking Array"
+    "description": "C++ Template with Frequency / Marking Array and Full Libraries"
   },
   "Test Case Loop": {
     "prefix": "test",
@@ -221,6 +230,8 @@
   "Check Perfect Square": {
     "prefix": "f_isperfectsquare",
     "body": [
+      "#include <cmath>",
+      "",
       "bool isPerfectSquare(long long n) {",
       "    if (n < 0) return false;",
       "    long long sq = std::sqrt(n);",
