@@ -1,4 +1,21 @@
 {
+  "Fibonacci Vector Check": {
+    "prefix": "fibo",
+    "body": [
+      "vector<long long> fibo(93);",
+      "void setFibo() {",
+      "    fibo[0] = 0;",
+      "    fibo[1] = 1;",
+      "    for (int i = 2; i < 93; i++) {",
+      "        fibo[i] = fibo[i - 1] + fibo[i - 2];",
+      "    }",
+      "}",
+      "bool checkFibo(long long n) {",
+      "    return binary_search(fibo.begin(), fibo.end(), n);",
+      "}"
+    ],
+    "description": "Fibonacci vector setup and binary search check"
+  },
   "Sieve of Eratosthenes": {
     "prefix": "sieve",
     "description": "Sieve of Eratosthenes implementation using vector<bool>",
@@ -59,23 +76,6 @@
       "}"
     ],
     "description": "C++ Template với mảng đánh dấu, biến đếm ans và con trỏ dừng $0"
-  },
-  "Fibonacci Array Setup and Check": {
-    "prefix": "fibo",
-    "body": [
-      "long long fibo[94] = {0};",
-      "void setFibo() {",
-      "    fibo[0] = 0;",
-      "    fibo[1] = 1;",
-      "    for (int i = 2; i < 94; i++) {",
-      "        fibo[i] = fibo[i - 1] + fibo[i - 2];",
-      "    }",
-      "}",
-      "bool checkFibo(long long n) {",
-      "    return binary_search(fibo, fibo + 94, n);",
-      "}"
-    ],
-    "description": "Khởi tạo mảng Fibonacci 94 phần tử và hàm kiểm tra số Fibonacci (Binary Search O(log N))"
   },
   "Sieve of Eratosthenes (Composite)": {
     "prefix": "composite",
