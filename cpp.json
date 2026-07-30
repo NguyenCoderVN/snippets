@@ -1,5 +1,24 @@
 {
-  "Fibonacci Vector Check": {
+  "Binary Exponentiation": {
+    "prefix": "binpow",
+    "description": "Binary Exponentiation (Modulo 10^9 + 7)",
+    "body": [
+      "const long long mod = 1e9 + 7;",
+      "long long binpow(long long a, long long n) {",
+      "\tlong long res = 1;",
+      "\ta = (a % mod + mod) % mod;",
+      "\twhile (n > 0) {",
+      "\t\tif (n & 1) {",
+      "\t\t\tres = (res * a) % mod;",
+      "\t\t}",
+      "\t\ta = (a * a) % mod;",
+      "\t\tn >>= 1;",
+      "\t}",
+      "\treturn res;",
+      "}"
+    ]
+  },
+    "Fibonacci Vector Check": {
     "prefix": "fibo",
     "body": [
       "vector<long long> fibo(93);",
