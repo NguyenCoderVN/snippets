@@ -4,7 +4,6 @@
     "description": "Sieve of Eratosthenes implementation using vector<bool>",
     "body": [
       "vector<bool> isPrime(1000005, true);",
-      "",
       "void prime() {",
       "\tisPrime[0] = isPrime[1] = false;",
       "\tfor (int i = 2; i * i <= 1000000; ++i)",
