@@ -63,8 +63,6 @@
   "Fibonacci Array Setup and Check": {
     "prefix": "fibo",
     "body": [
-      "#include <algorithm>",
-      "",
       "long long fibo[94] = {0};",
       "void setFibo() {",
       "    fibo[0] = 0;",
@@ -74,7 +72,7 @@
       "    }",
       "}",
       "bool checkFibo(long long n) {",
-      "    return std::binary_search(fibo, fibo + 94, n);",
+      "    return binary_search(fibo, fibo + 94, n);",
       "}"
     ],
     "description": "Khởi tạo mảng Fibonacci 94 phần tử và hàm kiểm tra số Fibonacci (Binary Search O(log N))"
