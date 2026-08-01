@@ -1,4 +1,26 @@
 {
+  "Process Vector": {
+    "prefix": ["process_vector", "pvec"],
+    "description": "Hàm process_vector in và sắp xếp vector",
+    "body": [
+      "void process_vector(vector<int> v, string order = \"\") {",
+      "  if (order == \"up\") {",
+      "    sort(v.begin(), v.end());",
+      "  } else if (order == \"down\") {",
+      "    sort(v.begin(), v.end(), greater<int>());",
+      "  }",
+      "",
+      "  if (v.empty()) {",
+      "    cout << \"EMPTY\\n\";",
+      "  } else {",
+      "    for (auto it = v.begin(); it != v.end(); ++it) {",
+      "      cout << *it << ' ';",
+      "    }",
+      "    cout << \"\\n\";",
+      "  }",
+      "}"
+    ]
+  },
   "Binary Exponentiation": {
     "prefix": "binpow",
     "description": "Binary Exponentiation (Modulo 10^9 + 7)",
