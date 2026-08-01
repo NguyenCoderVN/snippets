@@ -1,7 +1,19 @@
 {
-  "C++ Cout Vector Template": {
-    "prefix": "f_cout_vector",
+  "C++ Vector Helper Template": {
+    "prefix": "cppvector",
+    "description": "Template utility to print, sort, and process vector operations in C++",
     "body": [
+      "#include <algorithm>",
+      "#include <cmath>",
+      "#include <functional>",
+      "#include <iomanip>",
+      "#include <iostream>",
+      "#include <numeric>",
+      "#include <string>",
+      "#include <vector>",
+      "",
+      "using namespace std;",
+      "",
       "template <typename T>",
       "void cout_vector(vector<T> &v, string para = \"\") {",
       "  if (v.empty()) {",
@@ -30,10 +42,27 @@
       "    cout << *it << (it == v.end() - 1 ? \"\" : \" \");",
       "",
       "  cout << '\\n';",
+      "}",
+      "",
+      "/**",
+      " * TODO: ${1:Mo ta chuc nang}",
+      " */",
+      "int main() {",
+      "  ios_base::sync_with_stdio(false);",
+      "  cin.tie(NULL);",
+      "",
+      "  int n;",
+      "  cin >> n;",
+      "  vector<int> v(n);",
+      "  for (int i = 0; i < n; i++)",
+      "    cin >> v[i];",
+      "",
+      "  cout_vector(v);",
+      "  ${0}",
+      "  return 0;",
       "}"
-    ],
-    "description": "Hàm template in và thao tác trên vector (sort, reverse, max, min, sum)"
-  },
+    ]
+  },  
   "Binary Exponentiation": {
     "prefix": "binpow",
     "description": "Binary Exponentiation (Modulo 10^9 + 7)",
