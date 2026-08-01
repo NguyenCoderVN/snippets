@@ -41,7 +41,7 @@
       "}",
       "",
       "/**",
-      " * TODO:",
+      " * TODO: $0",
       " */",
       "int main() {",
       "\tios_base::sync_with_stdio(false);",
