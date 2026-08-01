@@ -3,6 +3,7 @@
     "prefix": "cppvector",
     "description": "Template utility to print, sort, and process vector operations in C++",
     "body": [
+      "",
       "#include <algorithm>",
       "#include <cmath>",
       "#include <functional>",
