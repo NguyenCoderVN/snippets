@@ -1,7 +1,6 @@
 {
-  "C++ Vector Helper Template": {
-    "prefix": "cppvector",
-    "description": "Template utility to print, sort, and process vector operations in C++",
+  "Competitive Programming Template": {
+    "prefix": "cppvectorn",
     "body": [
       "#include <algorithm>",
       "#include <cmath>",
@@ -14,6 +13,70 @@
       "",
       "using namespace std;",
       "",
+      "/**",
+      " * TODO: $0",
+      " */",
+      "int main() {",
+      "  ios_base::sync_with_stdio(false);",
+      "  cin.tie(NULL);",
+      "",
+      "  int n;",
+      "  cin >> n;",
+      "  vector<int> v(n);",
+      "  for (int i = 0; i < n; i++)",
+      "    cin >> v[i];",
+      "",
+      "  return 0;",
+      "}"
+    ],
+    "description": "Template C++ cơ bản nhập mảng 1 chiều"
+  }, 
+  "Count and Print Frequencies": {
+    "prefix": "freqCount",
+    "body": [
+      "template <typename T>",
+      "vector<pair<T, int>> countFrequencies(vector<T>& v, string order = \"none\") {",
+      "    vector<pair<T, int>> freqList;",
+      "",
+      "    for (const auto &x : v) {",
+      "        bool found = false;",
+      "        for (auto &p : freqList) {",
+      "            if (p.first == x) {",
+      "                p.second++;",
+      "                found = true;",
+      "                break;",
+      "            }",
+      "        }",
+      "        if (!found) {",
+      "            freqList.push_back({x, 1});",
+      "        }",
+      "    }",
+      "",
+      "    if (order == \"asc\") {",
+      "        sort(freqList.begin(), freqList.end(), [](const pair<T, int>& a, const pair<T, int>& b) {",
+      "            return a.first < b.first;",
+      "        });",
+      "    } else if (order == \"desc\") {",
+      "        sort(freqList.begin(), freqList.end(), [](const pair<T, int>& a, const pair<T, int>& b) {",
+      "            return a.first > b.first;",
+      "        });",
+      "    }",
+      "",
+      "    return freqList;",
+      "}",
+      "",
+      "template <typename T>",
+      "void printFrequencies(const vector<pair<T, int>>& freqList) {",
+      "    for (const auto &p : freqList) {",
+      "        cout << \"(\" << p.first << \", \" << p.second << \")\\n\";",
+      "    }",
+      "}"
+    ],
+    "description": "Hàm đếm và in tần suất xuất hiện các phần tử trong vector C++"
+  },
+  "Cout Vector Function": {
+    "prefix": "f_coutvec",
+    "body": [
       "template <typename T>",
       "void cout_vector(vector<T> &v, string para = \"\") {",
       "  if (v.empty()) {",
@@ -42,27 +105,10 @@
       "    cout << *it << (it == v.end() - 1 ? \"\" : \" \");",
       "",
       "  cout << '\\n';",
-      "}",
-      "",
-      "/**",
-      " * TODO: $0",
-      " */",
-      "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "",
-      "  int n;",
-      "  cin >> n;",
-      "  vector<int> v(n);",
-      "  for (int i = 0; i < n; i++)",
-      "    cin >> v[i];",
-      "",
-      "  cout_vector(v);",
-      "",
-      "  return 0;",
       "}"
-    ]
-  },  
+    ],
+    "description": "Hàm template xuất và xử lý vector"
+  },
   "Binary Exponentiation": {
     "prefix": "binpow",
     "description": "Binary Exponentiation (Modulo 10^9 + 7)",
@@ -267,18 +313,18 @@
     ],
     "description": "Read two 1D arrays a and b"
   },
-  "Check Prime": {
-    "prefix": "f_isprime",
+  "Is Prime Function": {
+    "prefix": "isprime",
     "body": [
-      "bool isPrime(long long n) {",
-      "    if (n < 2) return false;",
-      "    for (long long i = 2; i * i <= n; i++) {",
-      "        if (n % i == 0) return false;",
-      "    }",
-      "    return true;",
+      "template <typename T> bool is_prime(T n) {",
+      "  for (T i = 2; i * i <= n; ++i) {",
+      "    if (n % i == 0)",
+      "      return false;",
+      "  }",
+      "  return n > 1;",
       "}"
     ],
-    "description": "Check if a number is prime (O(sqrt(N)))"
+    "description": "Khuôn mẫu kiểm tra số nguyên tố"
   },
   "Check Prime Digits": {
     "prefix": "f_isprimedigit",
