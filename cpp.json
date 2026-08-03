@@ -1,4 +1,27 @@
 {
+  "Sieve of Eratosthenes": {
+    "prefix": "sieve",
+    "body": [
+      "int prime[10000001];",
+      "",
+      "void sieve() {",
+      "\tint N = 10000000;",
+      "\tfor (int i = 0; i <= N; i++) {",
+      "\t\tprime[i] = 1;",
+      "\t}",
+      "\tprime[0] = prime[1] = 0;",
+      "\t",
+      "\tfor (int i = 2; (long long)i * i <= N; i++) {",
+      "\t\tif (prime[i]) {",
+      "\t\t\tfor (int j = i * i; j <= N; j += i) {",
+      "\t\t\t\tprime[j] = 0;",
+      "\t\t\t}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Optimized Sieve of Eratosthenes up to 10^7"
+  },
   "Competitive Programming Template": {
     "prefix": "cppvectorn",
     "body": [
