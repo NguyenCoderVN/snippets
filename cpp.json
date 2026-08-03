@@ -1,4 +1,41 @@
 {
+  "Segmented Sieve": {
+    "prefix": "segmentedsieve",
+    "body": [
+      "#include <cmath>",
+      "#include <iostream>",
+      "#include <vector>",
+      "using namespace std;",
+      "using ll = long long;",
+      "",
+      "void segmentedSieve(ll L, ll R) {",
+      "  ll lim = sqrt(R);",
+      "  vector<bool> mark(lim + 1, true);",
+      "  vector<ll> primes;",
+      "  for (ll i = 2; i <= lim; i++) {",
+      "    if (mark[i]) {",
+      "      primes.push_back(i);",
+      "      for (ll j = i * i; j <= lim; j += i)",
+      "        mark[j] = false;",
+      "    }",
+      "  }",
+      "",
+      "  vector<bool> isPrime(R - L + 1, true);",
+      "  for (ll p : primes) {",
+      "    for (ll j = max(p * p, (L + p - 1) / p * p); j <= R;",
+      "         j += p) {",
+      "      isPrime[j - L] = false;",
+      "    }",
+      "  }",
+      "",
+      "  for (ll i = max(2LL, L); i <= R; i++) {",
+      "    if (isPrime[i - L])",
+      "      cout << i << ' ';",
+      "  }",
+      "}"
+    ],
+    "description": "Segmented Sieve Algorithm"
+  },
   "Competitive Programming Template": {
     "prefix": "cppvectorn",
     "body": [
