@@ -1,27 +1,4 @@
 {
-  "Sieve of Eratosthenes": {
-    "prefix": "sieve",
-    "body": [
-      "int prime[10000001];",
-      "",
-      "void sieve() {",
-      "\tint N = 10000000;",
-      "\tfor (int i = 0; i <= N; i++) {",
-      "\t\tprime[i] = 1;",
-      "\t}",
-      "\tprime[0] = prime[1] = 0;",
-      "\t",
-      "\tfor (int i = 2; (long long)i * i <= N; i++) {",
-      "\t\tif (prime[i]) {",
-      "\t\t\tfor (int j = i * i; j <= N; j += i) {",
-      "\t\t\t\tprime[j] = 0;",
-      "\t\t\t}",
-      "\t\t}",
-      "\t}",
-      "}"
-    ],
-    "description": "Optimized Sieve of Eratosthenes up to 10^7"
-  },
   "Competitive Programming Template": {
     "prefix": "cppvectorn",
     "body": [
@@ -172,12 +149,12 @@
     "prefix": "sieve",
     "description": "Sieve of Eratosthenes implementation using vector<bool>",
     "body": [
-      "vector<bool> isPrime(1000005, true);",
+      "vector<bool> isPrime(10000005, true);",
       "void prime() {",
       "\tisPrime[0] = isPrime[1] = false;",
-      "\tfor (int i = 2; i * i <= 1000000; ++i)",
+      "\tfor (int i = 2; i * i <= 10000000; ++i)",
       "\t\tif (isPrime[i])",
-      "\t\t\tfor (int j = i * i; j <= 1000000; j += i)",
+      "\t\t\tfor (int j = i * i; j <= 10000000; j += i)",
       "\t\t\t\tisPrime[j] = false;",
       "}"
     ]
