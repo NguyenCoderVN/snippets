@@ -1,4 +1,97 @@
 {
+  "CPP Set Input": {
+    "prefix": "cpp_set_array",
+    "body": [
+      "#include <iostream>",
+      "#include <set>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  int n;",
+      "  cin >> n;",
+      "  int a[n];",
+      "  set<int> se;",
+      "",
+      "  for (int i = 0; i < n; i++) {",
+      "    cin >> a[i];",
+      "    se.insert(a[i]);",
+      "  }",
+      "}"
+    ],
+    "description": "C++ code block for reading array and inserting into set"
+  },
+
+  "CPP Map Input": {
+    "prefix": "cpp_map_array",
+    "body": [
+      "#include <iostream>",
+      "#include <map>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  int n;",
+      "  cin >> n;",
+      "  int a[n];",
+      "  map<int, int> mp;",
+      "",
+      "  for (int i = 0; i < n; i++) {",
+      "    cin >> a[i];",
+      "    mp[a[i]]++;",
+      "  }",
+      "}"
+    ],
+    "description": "C++ code block for reading array and counting frequencies using map"
+  },
+
+  "CPP Vector and Set Input": {
+    "prefix": "cpp_set_vec",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "#include <set>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  int n;",
+      "  cin >> n;",
+      "  vector<int> a(n);",
+      "  set<int> se;",
+      "",
+      "  for (int i = 0; i < n; i++) {",
+      "    cin >> a[i];",
+      "    se.insert(a[i]);",
+      "  }",
+      "}"
+    ],
+    "description": "C++ code block for reading elements into vector and inserting into set"
+  },
+
+  "CPP Vector and Map Input": {
+    "prefix": "cpp_map_vec",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "#include <map>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  int n;",
+      "  cin >> n;",
+      "  vector<int> a(n);",
+      "  map<int, int> mp;",
+      "",
+      "  for (int i = 0; i < n; i++) {",
+      "    cin >> a[i];",
+      "    mp[a[i]]++;",
+      "  }",
+      "}"
+    ],
+    "description": "C++ code block for reading elements into vector and counting frequencies using map"
+  },
   "Prime Factorization using SPF": {
     "prefix": "spf_factorize",
     "body": [
