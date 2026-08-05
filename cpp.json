@@ -20,6 +20,8 @@
       "    cin >> a[i];",
       "    se.insert(a[i]);",
       "  }",
+      "",
+      "  return 0",
       "}"
     ],
     "description": "C++ code block for reading array and inserting into set"
@@ -46,6 +48,8 @@
       "    cin >> a[i];",
       "    mp[a[i]]++;",
       "  }",
+      "",
+      "  return 0",
       "}"
     ],
     "description": "C++ code block for reading array and counting frequencies using map"
@@ -73,6 +77,8 @@
       "    cin >> a[i];",
       "    se.insert(a[i]);",
       "  }",
+      "",
+      "  return 0",
       "}"
     ],
     "description": "C++ code block for reading elements into vector and inserting into set"
@@ -100,6 +106,8 @@
       "    cin >> a[i];",
       "    mp[a[i]]++;",
       "  }",
+      "",
+      "  return 0",
       "}"
     ],
     "description": "C++ code block for reading elements into vector and counting frequencies using map"
