@@ -431,14 +431,14 @@
   "Fast Output Newline": {
     "prefix": "coute",
     "body": [
-      "cout << $0 << '\\n';"
+      "cout << $0 << \"\\n\";"
     ],
     "description": "Print expression with newline"
   },
   "Fast Output Space": {
     "prefix": "coutb",
     "body": [
-      "cout << $0 << ' ';"
+      "cout << $0 << \" \";"
     ],
     "description": "Print expression with space separator"
   },
