@@ -474,10 +474,10 @@
     "description": "Read two 1D arrays a and b"
   },
   "Is Prime Function": {
-    "prefix": "isprime",
+    "prefix": "f_isprime",
     "body": [
-      "template <typename T> bool is_prime(T n) {",
-      "  for (T i = 2; i * i <= n; ++i) {",
+      "bool isPrime(long long n) {",
+      "  for (long long i = 2; i * i <= n; ++i) {",
       "    if (n % i == 0)",
       "      return false;",
       "  }",
