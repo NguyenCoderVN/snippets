@@ -167,16 +167,10 @@
     ],
     "description": "Segmented Sieve Algorithm"
   },
-  "Competitive Programming Template": {
-    "prefix": "cppvectorn",
+  "C++ Vector Input Template": {
+    "prefix": "cpp_vec",
     "body": [
-      "#include <algorithm>",
-      "#include <cmath>",
-      "#include <functional>",
-      "#include <iomanip>",
       "#include <iostream>",
-      "#include <numeric>",
-      "#include <string>",
       "#include <vector>",
       "",
       "using namespace std;",
@@ -185,19 +179,17 @@
       " * TODO: $0",
       " */",
       "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "",
       "  int n;",
       "  cin >> n;",
       "  vector<int> v(n);",
+      "",
       "  for (int i = 0; i < n; i++)",
       "    cin >> v[i];",
       "",
       "  return 0;",
       "}"
     ],
-    "description": "Template C++ cơ bản nhập mảng 1 chiều"
+    "description": "Template khởi tạo và nhập vector trong C++"
   }, 
   "Count and Print Frequencies": {
     "prefix": "freqCount",
