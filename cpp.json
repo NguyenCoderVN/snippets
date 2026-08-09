@@ -75,32 +75,31 @@
     ],
     "description": "C++ Template using std::set"
   },
-  "CPP Map Input": {
-    "prefix": "cpp_map",
+  "C++ Map Template": {
+    "prefix": "cppmap",
     "body": [
       "#include <iostream>",
       "#include <map>",
-      "",
-      "using namespace std;",
       "",
       "/**",
       " * TODO: $0",
       " */",
       "int main() {",
-      "  int n;",
-      "  int x;",
-      "  cin >> n;",
-      "  map<int, int> mp;",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(NULL);",
       "",
-      "  for (int i = 0; i < n; i++) {",
-      "    cin >> x;",
-      "    mp[x]++;",
-      "  }",
+      "  int n;",
+      "  std::cin >> n;",
+      "  int x;",
+      "  std::map<int, int> mp;",
+      "",
+      "  for (int i = 0; i < n; i++)",
+      "    std::cin >> x, mp[x]++;",
       "",
       "  return 0;",
       "}"
     ],
-    "description": "C++ code block for reading array and counting frequencies using map"
+    "description": "C++ Template using std::map"
   },
   "Prime Factorization using SPF": {
     "prefix": "spf_factorize",
