@@ -76,7 +76,7 @@
     "description": "C++ Template using std::set"
   },
   "C++ Map Template": {
-    "prefix": "cppmap",
+    "prefix": "cpp_map",
     "body": [
       "#include <iostream>",
       "#include <map>",
