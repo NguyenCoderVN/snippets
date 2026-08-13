@@ -101,194 +101,6 @@
     ],
     "description": "C++ Template using std::map"
   },
-  "Prime Factorization using SPF": {
-    "prefix": "spf_factorize",
-    "body": [
-      "#include <iostream>",
-      "#include <vector>",
-      "",
-      "using namespace std;",
-      "",
-      "vector<int> getSPF(int N) {",
-      "    vector<int> spf(N + 1);",
-      "",
-      "    for (int i = 1; i <= N; i++) {",
-      "        spf[i] = i;",
-      "    }",
-      "",
-      "    for (int i = 2; i * i <= N; i++) {",
-      "        if (spf[i] == i) {",
-      "            for (int j = i * i; j <= N; j += i) {",
-      "                if (spf[j] == j) {",
-      "                    spf[j] = i;",
-      "                }",
-      "            }",
-      "        }",
-      "    }",
-      "    return spf;",
-      "}",
-      "",
-      "int main() {",
-      "    int max_val = 2000;",
-      "    vector<int> prime = getSPF(max_val);",
-      "",
-      "    int a[] = {60, 30, 20, 17, 15, 100, 2000, 28};",
-      "    int n = sizeof(a) / sizeof(a[0]);",
-      "",
-      "    for (int i = 0; i < n; i++) {",
-      "        cout << a[i] << \" = \";",
-      "        int temp = a[i];",
-      "        while (temp != 1) {",
-      "            cout << prime[temp] << \" \";",
-      "            temp /= prime[temp];",
-      "        }",
-      "        cout << \"\\n\";",
-      "    }",
-      "",
-      "    return 0;",
-      "}"
-    ],
-    "description": "Prime Factorization using Smallest Prime Factor (SPF) sieve algorithm"
-  },
-  "Segmented Sieve": {
-    "prefix": "segmentedsieve",
-    "body": [
-      "#include <cmath>",
-      "#include <iostream>",
-      "#include <vector>",
-      "using namespace std;",
-      "using ll = long long;",
-      "",
-      "void segmentedSieve(ll L, ll R) {",
-      "  ll lim = sqrt(R);",
-      "  vector<bool> mark(lim + 1, true);",
-      "  vector<ll> primes;",
-      "  for (ll i = 2; i <= lim; i++) {",
-      "    if (mark[i]) {",
-      "      primes.push_back(i);",
-      "      for (ll j = i * i; j <= lim; j += i)",
-      "        mark[j] = false;",
-      "    }",
-      "  }",
-      "",
-      "  vector<bool> isPrime(R - L + 1, true);",
-      "  for (ll p : primes) {",
-      "    for (ll j = max(p * p, (L + p - 1) / p * p); j <= R;",
-      "         j += p) {",
-      "      isPrime[j - L] = false;",
-      "    }",
-      "  }",
-      "",
-      "  for (ll i = max(2LL, L); i <= R; i++) {",
-      "    if (isPrime[i - L])",
-      "      cout << i << ' ';",
-      "  }",
-      "}"
-    ],
-    "description": "Segmented Sieve Algorithm"
-  },
-  "C++ Vector Input Template": {
-    "prefix": "cpp_vec",
-    "body": [
-      "#include <iostream>",
-      "#include <vector>",
-      "",
-      "using namespace std;",
-      "",
-      "/**",
-      " * TODO: $0",
-      " */",
-      "int main() {",
-      "  int n;",
-      "  cin >> n;",
-      "  vector<int> v(n);",
-      "",
-      "  for (int i = 0; i < n; i++)",
-      "    cin >> v[i];",
-      "",
-      "  return 0;",
-      "}"
-    ],
-    "description": "Template khởi tạo và nhập vector trong C++"
-  }, 
-  "Count and Print Frequencies": {
-    "prefix": "freqCount",
-    "body": [
-      "template <typename T>",
-      "vector<pair<T, int>> countFrequencies(vector<T>& v, string order = \"none\") {",
-      "    vector<pair<T, int>> freqList;",
-      "",
-      "    for (const auto &x : v) {",
-      "        bool found = false;",
-      "        for (auto &p : freqList) {",
-      "            if (p.first == x) {",
-      "                p.second++;",
-      "                found = true;",
-      "                break;",
-      "            }",
-      "        }",
-      "        if (!found) {",
-      "            freqList.push_back({x, 1});",
-      "        }",
-      "    }",
-      "",
-      "    if (order == \"asc\") {",
-      "        sort(freqList.begin(), freqList.end(), [](const pair<T, int>& a, const pair<T, int>& b) {",
-      "            return a.first < b.first;",
-      "        });",
-      "    } else if (order == \"desc\") {",
-      "        sort(freqList.begin(), freqList.end(), [](const pair<T, int>& a, const pair<T, int>& b) {",
-      "            return a.first > b.first;",
-      "        });",
-      "    }",
-      "",
-      "    return freqList;",
-      "}",
-      "",
-      "template <typename T>",
-      "void printFrequencies(const vector<pair<T, int>>& freqList) {",
-      "    for (const auto &p : freqList) {",
-      "        cout << \"(\" << p.first << \", \" << p.second << \")\\n\";",
-      "    }",
-      "}"
-    ],
-    "description": "Hàm đếm và in tần suất xuất hiện các phần tử trong vector C++"
-  },
-  "Cout Vector Function": {
-    "prefix": "f_coutvec",
-    "body": [
-      "template <typename T>",
-      "void cout_vector(vector<T> &v, string para = \"\") {",
-      "  if (v.empty()) {",
-      "    cout << \"EMPTY\\n\";",
-      "    return;",
-      "  }",
-      "",
-      "  if (para == \"up\")",
-      "    sort(v.begin(), v.end());",
-      "  else if (para == \"down\")",
-      "    sort(v.begin(), v.end(), greater<T>());",
-      "  else if (para == \"rev\")",
-      "    reverse(v.begin(), v.end());",
-      "  else if (para == \"max\") {",
-      "    cout << *max_element(v.begin(), v.end()) << '\\n';",
-      "    return;",
-      "  } else if (para == \"min\") {",
-      "    cout << *min_element(v.begin(), v.end()) << '\\n';",
-      "    return;",
-      "  } else if (para == \"sum\") {",
-      "    cout << accumulate(v.begin(), v.end(), T{}) << '\\n';",
-      "    return;",
-      "  }",
-      "",
-      "  for (auto it = v.begin(); it != v.end(); ++it)",
-      "    cout << *it << (it == v.end() - 1 ? \"\" : \" \");",
-      "",
-      "  cout << '\\n';",
-      "}"
-    ],
-    "description": "Hàm template xuất và xử lý vector"
-  },
   "Binary Exponentiation": {
     "prefix": "binpow",
     "description": "Binary Exponentiation (Modulo 10^9 + 7)",
@@ -308,84 +120,7 @@
       "}"
     ]
   },
-    "Fibonacci Vector Check": {
-    "prefix": "fibo",
-    "body": [
-      "vector<long long> fibo(93);",
-      "void setFibo() {",
-      "    fibo[0] = 0;",
-      "    fibo[1] = 1;",
-      "    for (int i = 2; i < 93; i++) {",
-      "        fibo[i] = fibo[i - 1] + fibo[i - 2];",
-      "    }",
-      "}",
-      "bool checkFibo(long long n) {",
-      "    return binary_search(fibo.begin(), fibo.end(), n);",
-      "}"
-    ],
-    "description": "Fibonacci vector setup and binary search check"
-  },
-  "Sieve of Eratosthenes": {
-    "prefix": "sieve",
-    "description": "Sieve of Eratosthenes implementation using vector<bool>",
-    "body": [
-      "vector<bool> isPrime(10000005, true);",
-      "void prime() {",
-      "\tisPrime[0] = isPrime[1] = false;",
-      "\tfor (int i = 2; i * i <= 10000000; ++i)",
-      "\t\tif (isPrime[i])",
-      "\t\t\tfor (int j = i * i; j <= 10000000; j += i)",
-      "\t\t\t\tisPrime[j] = false;",
-      "}"
-    ]
-  },
-  "Reverse Loop Vector": {
-    "prefix": "forr",
-    "description": "Loop backward from n-1 down to 0",
-    "body": [
-      "for (int ${1:i} = n - 1; ${1:i} >= 0; ${1:i}--) {",
-      "\tcout << ${2:i} << \" \";",
-      "}"
-    ]
-  },
-  "CP Template Frequency Array with Answer Loop": {
-    "prefix": "cppmangpp",
-    "body": [
-      "#include <algorithm>",
-      "#include <cmath>",
-      "#include <iostream>",
-      "#include <vector>",
-      "",
-      "using namespace std;",
-      "int c[1000001];",
-      "",
-      "/**",
-      " * TODO: $0",
-      " */",
-      "int main() {",
-      "  ios_base::sync_with_stdio(false);",
-      "  cin.tie(NULL);",
-      "",
-      "  int n;",
-      "  cin >> n;",
-      "  vector<int> a(n);",
-      "",
-      "  for (int i = 0; i < n; i++) {",
-      "    cin >> a[i];",
-      "    c[a[i]] = 1;",
-      "  }",
-      "",
-      "  int ans = 0;",
-      "  for (int i = 0; i < n; i++) {",
-      "\t",
-      "  }",
-      "  cout << ans;",
-      "",
-      "  return 0;",
-      "}"
-    ],
-    "description": "C++ Template với mảng đánh dấu, biến đếm ans và con trỏ dừng $0"
-  },
+    
   "Sieve of Eratosthenes (Composite)": {
     "prefix": "composite",
     "body": [
@@ -407,15 +142,10 @@
     "prefix": "cpp_st",
     "body": [
       "#include <iostream>",
-      "#include <vector>",
-      "#include <algorithm>",
-      "#include <cmath>",
-      "",
-      "using namespace std;",
       "",
       "int main() {",
-      "    ios_base::sync_with_stdio(false);",
-      "    cin.tie(NULL);",
+      "    std::ios_base::sync_with_stdio(false);",
+      "    std::cin.tie(NULL);",
       "    ",
       "    $0",
       "    return 0;",
@@ -423,26 +153,7 @@
     ],
     "description": "Standard C++ Competitive Programming Template (Standard Libraries)"
   },
-  "Test Case Loop": {
-    "prefix": "test",
-    "body": [
-      "int test;",
-      "cin >> test;",
-      "while (test--) {",
-      "    $0",
-      "}"
-    ],
-    "description": "Loop through test cases"
-  },
-  "Input Variable N": {
-    "prefix": "bienn",
-    "body": [
-      "int n;",
-      "cin >> n;"
-    ],
-    "description": "Declare and read integer n"
-  },
-  "Fast Output Newline": {
+   "Fast Output Newline": {
     "prefix": "coute",
     "body": [
       "std::cout << $0 << \"\\n\";"
@@ -474,26 +185,7 @@
     ],
     "description": "Descending for loop (n-1 down to 0)"
   },
-  "Read 1D Array": {
-    "prefix": "mang1ca",
-    "body": [
-      "vector<int> a(n);",
-      "for (int i = 0; i < n; i++) {",
-      "    cin >> a[i];",
-      "}"
-    ],
-    "description": "Read single 1D array into vector"
-  },
-  "Read Two 1D Arrays": {
-    "prefix": "mang1cab",
-    "body": [
-      "vector<int> a(n), b(m);",
-      "for (int i = 0; i < n; i++) cin >> a[i];",
-      "for (int i = 0; i < m; i++) cin >> b[i];"
-    ],
-    "description": "Read two 1D arrays a and b"
-  },
-  "Is Prime Function": {
+   "Is Prime Function": {
     "prefix": "f_isprime",
     "body": [
       "bool isPrime(long long n) {",
