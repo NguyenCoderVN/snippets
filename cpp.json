@@ -1,4 +1,12 @@
 {
+  "Fast I/O": {
+    "prefix": "fastio",
+    "body": [
+      "std::ios_base::sync_with_stdio(false);",
+      "std::cin.tie(NULL);"
+    ],
+    "description": "Disable synchronization between C and C++ standard streams for fast I/O"
+  },
   "C++ Vector Template": {
     "prefix": "cpp_vector",
     "body": [
@@ -9,9 +17,6 @@
       " * TODO: $0",
       " */",
       "int main() {",
-      "  std::ios_base::sync_with_stdio(false);",
-      "  std::cin.tie(NULL);",
-      "",
       "  int n;",
       "  std::cin >> n;",
       "  int x;",
@@ -34,9 +39,6 @@
       " * TODO: $0",
       " */",
       "int main() {",
-      "  std::ios_base::sync_with_stdio(false);",
-      "  std::cin.tie(NULL);",
-      "",
       "  int n;",
       "  std::cin >> n;",
       "  int a[n];",
@@ -59,9 +61,6 @@
       " * TODO: $0",
       " */",
       "int main() {",
-      "  std::ios_base::sync_with_stdio(false);",
-      "  std::cin.tie(NULL);",
-      "",
       "  int n;",
       "  std::cin >> n;",
       "  int x;",
@@ -85,9 +84,6 @@
       " * TODO: $0",
       " */",
       "int main() {",
-      "  std::ios_base::sync_with_stdio(false);",
-      "  std::cin.tie(NULL);",
-      "",
       "  int n;",
       "  std::cin >> n;",
       "  int x;",
@@ -144,9 +140,6 @@
       "#include <iostream>",
       "",
       "int main() {",
-      "    std::ios_base::sync_with_stdio(false);",
-      "    std::cin.tie(NULL);",
-      "    ",
       "    $0",
       "    return 0;",
       "}"
