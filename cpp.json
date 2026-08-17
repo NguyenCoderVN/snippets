@@ -7,6 +7,24 @@
     ],
     "description": "Disable synchronization between C and C++ standard streams for fast I/O"
   },
+  "C++ Input Intervals": {
+  "prefix": "cpp_vector_pair",
+  "description": "C++ input template for pair vector",
+  "body": [
+    "#include <iostream>",
+    "#include <vector>",
+    "",
+    "int main() {",
+    "  int n;",
+    "  std::cin >> n;",
+    "  std::vector<std::pair<int, int>> v(n);",
+    "  for (auto &[start, end] : v)",
+    "    std::cin >> start >> end;",
+    "",
+    "  return 0;",
+    "}"
+   ]
+  },
   "C++ Vector Template": {
     "prefix": "cpp_vector",
     "body": [
