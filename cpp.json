@@ -18,8 +18,8 @@
     "  int n;",
     "  std::cin >> n;",
     "  std::vector<std::pair<int, int>> v(n);",
-    "  for (auto &[start, end] : v)",
-    "    std::cin >> start >> end;",
+    "  for (auto &[first, second] : v)",
+    "    std::cin >> first >> second;",
     "",
     "  return 0;",
     "}"
