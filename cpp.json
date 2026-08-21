@@ -7,23 +7,30 @@
     ],
     "description": "Disable synchronization between C and C++ standard streams for fast I/O"
   },
-  "C++ Input Intervals": {
-  "prefix": "cpp_vector_pair",
-  "description": "C++ input template for pair vector",
-  "body": [
-    "#include <iostream>",
-    "#include <vector>",
-    "",
-    "int main() {",
-    "  int n;",
-    "  std::cin >> n;",
-    "  std::vector<std::pair<int, int>> v(n);",
-    "  for (auto &[first, second] : v)",
-    "    std::cin >> first >> second;",
-    "",
-    "  return 0;",
-    "}"
-   ]
+  "Read Pair Vector": {
+    "prefix": "cinpairvec",
+    "description": "Reads n pairs of integers into a std::vector using structured binding",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "",
+      "int main() {",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
+      "  int n;",
+      "  std::cin >> n;",
+      "",
+      "  std::vector<std::pair<int, int>> v(n);",
+      "  for (auto& [first, second] : v) {",
+      "    std::cin >> first >> second;",
+      "  }",
+      "",
+      "  $0",
+      "",
+      "  return 0;",
+      "}"
+    ]
   },
   "Google Convention Vector Input": {
     "prefix": "cpp_vector",
