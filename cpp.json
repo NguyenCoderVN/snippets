@@ -106,30 +106,34 @@
     ],
     "description": "C++ Competitive Programming Template"
   },
-  "Google Convention Set Insert": {
+  "Cpp Fast Input Set": {
     "prefix": "cpp_set",
+    "description": "C++ template using std::set with fast I/O",
     "body": [
       "#include <iostream>",
       "#include <set>",
       "",
       "int main() {",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
       "  int n;",
       "  if (!(std::cin >> n)) {",
       "    return 0;",
       "  }",
       "",
-      "  std::set<int> nums;",
+      "  std::set<int> se;",
       "",
       "  for (int i = 0; i < n; ++i) {",
-      "    int val;",
-      "    std::cin >> val;",
-      "    nums.insert(val);",
+      "    int x;",
+      "    std::cin >> x;",
+      "    se.insert(x);",
       "  }",
+      "  $0",
       "",
       "  return 0;",
       "}"
-    ],
-    "description": "Standard C++ snippet for reading elements into a set (Google Convention)"
+    ]
   },
   "Google Convention Map Frequency": {
     "prefix": "cpp_map",
