@@ -1,4 +1,31 @@
 {
+  "C++ Recursion Template": {
+    "prefix": "cpprec",
+    "description": "C++ Recursion template without modification",
+    "body": [
+      "#include <iostream>",
+      "",
+      "long long Recursion(int n) {",
+      "  // Base case",
+      "  if (n == 0) return 1;",
+      "  // Recursion Step",
+      "  return 0;",
+      "}",
+      "",
+      "int main() {",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
+      "  int n;",
+      "  if (!(std::cin >> n)) return 0;",
+      "",
+      "  long long ans = Recursion(n);",
+      "  std::cout << ans << \"\\n\";",
+      "",
+      "  return 0;",
+      "}"
+    ]
+  },
   "Fast I/O": {
     "prefix": "fastio",
     "body": [
