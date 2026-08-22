@@ -7,8 +7,64 @@
     ],
     "description": "Disable synchronization between C and C++ standard streams for fast I/O"
   },
+  "C++ Input Reading Template 2 vector": {
+    "prefix": "cpp_2vector",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "",
+      "int main() {",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
+      "  int n;",
+      "  int m;",
+      "  if (!(std::cin >> n >> m)) {",
+      "    return 0;",
+      "  }",
+      "",
+      "  std::vector<int> vec_n(n);",
+      "  for (int& val : vec_n) {",
+      "    std::cin >> val;",
+      "  }",
+      "",
+      "  std::vector<int> vec_m(m);",
+      "  for (int& val : vec_m) {",
+      "    std::cin >> val;",
+      "  }",
+      "",
+      "  return 0;",
+      "}"
+    ],
+    "description": "C++ template for reading vectors vec_n and vec_m"
+  },
+  "C++ Input Reading Template vector": {
+    "prefix": "cpp_vector",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "",
+      "int main() {",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
+      "  int n;",
+      "  if (!(std::cin >> n)) {",
+      "    return 0;",
+      "  }",
+      "",
+      "  std::vector<int> vec_n(n);",
+      "  for (int& val : vec_n) {",
+      "    std::cin >> val;",
+      "  }",
+      "",
+      "  return 0;",
+      "}"
+    ],
+    "description": "C++ template for reading vectors vec_n and vec_m"
+  },
   "Read Pair Vector": {
-    "prefix": "cinpairvec",
+    "prefix": "cpp_vector_pair",
     "description": "Reads n pairs of integers into a std::vector using structured binding",
     "body": [
       "#include <iostream>",
@@ -31,29 +87,6 @@
       "  return 0;",
       "}"
     ]
-  },
-  "Google Convention Vector Input": {
-    "prefix": "cpp_vector",
-    "body": [
-      "#include <iostream>",
-      "#include <vector>",
-      "",
-      "int main() {",
-      "  int n;",
-      "  if (!(std::cin >> n)) {",
-      "    return 0;",
-      "  }",
-      "",
-      "  std::vector<int> nums(n);",
-      "  ",
-      "  for (int& val : nums) {",
-      "    std::cin >> val;",
-      "  }",
-      "",
-      "  return 0;",
-      "}"
-    ],
-    "description": "Standard C++ snippet for reading elements into a vector (Google Convention)"
   },
   "C++ Template Array": {
     "prefix": "cpp_array",
