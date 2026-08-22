@@ -197,17 +197,22 @@
     ],
     "description": "Sieve of Eratosthenes (mark composite numbers)"
   },
-  "CP Template Standard": {
-    "prefix": "cpp_st",
+  "C++ Template": {
+    "prefix": "cpp",
     "body": [
       "#include <iostream>",
       "",
       "int main() {",
-      "    $0",
-      "    return 0;",
+      "  std::ios_base::sync_with_stdio(false);",
+      "  std::cin.tie(nullptr);",
+      "",
+      "  int n;",
+      "  if (!(std::cin >> n)) return 0;",
+      "",
+      "  return 0;",
       "}"
     ],
-    "description": "Standard C++ Competitive Programming Template (Standard Libraries)"
+    "description": "C++ template"
   },
    "Fast Output Newline": {
     "prefix": "coute",
